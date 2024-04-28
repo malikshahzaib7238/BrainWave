@@ -1,0 +1,36 @@
+{
+  "extends": [
+    "tslint:recommended"
+  ],
+  "jsRules": {},
+  "rules": {
+    "max-line-length": [
+      true,
+      120
+    ],
+    "array-type": [
+      true,
+      "generic"
+    ],
+    "object-literal-sort-keys": false,
+    "no-angle-bracket-type-assertion": false,
+    "ordered-imports": false,
+    "no-console": false,
+    "arrow-parens": false,
+    "interface-name": false,
+    "no-reference": false,
+    "variable-name":false,
+    "member-ordering": [
+      true,
+      {
+        "order": [
+          "fields-first"
+        ]
+      }
+    ],
+    "max-classes-per-file": false,
+    "whitespace": false,
+    "trailing-comma": false
+  },
+  "rulesDirectory": []
+}

@@ -1,0 +1,10 @@
+Flask==2.3.2
+Flask_Cors==4.0.0
+mne==1.4.2
+numpy==1.24.3
+pandas==2.0.3
+PyMySQL==1.1.0
+Requests==2.31.0
+tensorflow==2.13.0
+tensorflow_intel==2.13.0
+Werkzeug==2.3.6

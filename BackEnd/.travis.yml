@@ -1,0 +1,30 @@
+language: node_js
+node_js:
+- '10'
+cache:
+  directories:
+  - worker/target
+  - app/.node_modules
+before_install:
+- curl https://sh.rustup.rs -sSf | sh -s -- -y
+- source $HOME/.cargo/env
+- curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+install:
+- cd app
+- npm install
+- npm ci
+- cd ../
+script:
+- cd worker && sh ./build.sh
+- cd ../
+- cd app && npm run build
+- cd dist
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  local_dir: app/dist/
+  verbose: true
+
